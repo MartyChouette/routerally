@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://f5g6h7i8j9k0l1m2"]
+
+[ext_resource type="Script" path="res://scripts/Tiles/BaseTile.gd" id="1_base"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(64, 64)
+
+[node name="RoadCurve" type="Node2D"]
+script = ExtResource("1_base")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.3, 0.3, 0.3, 1)
+scale = Vector2(64, 64)
+
+[node name="NormalMap" type="Sprite2D" parent="."]
+modulate = Color(0.5, 0.5, 1, 1)
+scale = Vector2(64, 64)
+texture_filter = 2
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_1")
