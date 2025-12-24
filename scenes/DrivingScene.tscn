@@ -1,0 +1,111 @@
+[gd_scene load_steps=11 format=3 uid="uid://c2d3e4f5g6h7i8j9"]
+
+[ext_resource type="Script" path="res://scripts/Driving/DrivingScene.gd" id="1_driving"]
+[ext_resource type="Script" path="res://scripts/Driving/PlayerCar.gd" id="2_player"]
+[ext_resource type="Script" path="res://scripts/Tiles/TileMap.gd" id="3_tilemap"]
+[ext_resource type="Script" path="res://scripts/UI/PauseMenu.gd" id="4_pause"]
+[ext_resource type="Script" path="res://scripts/Driving/LapTracker.gd" id="5_lap"]
+[ext_resource type="Script" path="res://scripts/Scoring/ScoreManager.gd" id="6_score"]
+[ext_resource type="Script" path="res://scripts/AI/TrafficManager.gd" id="7_traffic"]
+[ext_resource type="Script" path="res://scripts/Driving/NearMissDetector.gd" id="8_nearmiss"]
+[ext_resource type="Script" path="res://scripts/Driving/PassDetector.gd" id="9_pass"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(32, 16)
+
+[node name="DrivingScene" type="Node2D"]
+script = ExtResource("1_driving")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 0)
+zoom = Vector2(0.5, 0.5)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(0, 0)
+direction = Vector2(0.5, -0.5)
+energy = 1.0
+shadow_enabled = true
+
+[node name="TileMap" type="Node2D" parent="."]
+script = ExtResource("3_tilemap")
+
+[node name="LapTracker" type="Node2D" parent="."]
+script = ExtResource("5_lap")
+
+[node name="ScoreManager" type="Node" parent="."]
+script = ExtResource("6_score")
+
+[node name="PassDetector" type="Node2D" parent="."]
+script = ExtResource("9_pass")
+
+[node name="TrafficManager" type="Node2D" parent="."]
+script = ExtResource("7_traffic")
+
+[node name="PlayerCar" type="CharacterBody2D" parent="."]
+groups = ["player_car"]
+position = Vector2(100, 100)
+script = ExtResource("2_player")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCar"]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="NearMissDetector" type="Area2D" parent="PlayerCar"]
+script = ExtResource("8_nearmiss")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="PlayerCar/NearMissDetector"]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerCar"]
+modulate = Color(1, 0.2, 0.2, 1)
+scale = Vector2(2, 1)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_pause")
+
+[node name="ColorRect" type="ColorRect" parent="UI/PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.7)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PauseMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -150.0
+offset_right = 200.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/PauseMenu/VBoxContainer"]
+layout_mode = 2
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="TileSelector" type="ItemList" parent="UI/PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PlaceTileButton" type="Button" parent="UI/PauseMenu/VBoxContainer"]
+layout_mode = 2
+text = "Place Selected Tile"
+
+[node name="ResumeButton" type="Button" parent="UI/PauseMenu/VBoxContainer"]
+layout_mode = 2
+text = "Resume"
