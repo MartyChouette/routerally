@@ -16,6 +16,7 @@ func _ready():
 	# Load tile scenes
 	tile_scenes[TileType.ROAD_STRAIGHT] = preload("res://scenes/Tiles/RoadStraight.tscn")
 	tile_scenes[TileType.ROAD_CURVE] = preload("res://scenes/Tiles/RoadCurve.tscn")
+	tile_scenes[TileType.ROAD_INTERSECTION] = preload("res://scenes/Tiles/RoadIntersection.tscn")
 	tile_scenes[TileType.NATURE] = preload("res://scenes/Tiles/Nature.tscn")
 	tile_scenes[TileType.MOUNTAIN] = preload("res://scenes/Tiles/Mountain.tscn")
 	

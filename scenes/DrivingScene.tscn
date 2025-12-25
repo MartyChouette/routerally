@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c2d3e4f5g6h7i8j9"]
+[gd_scene load_steps=12 format=3 uid="uid://c2d3e4f5g6h7i8j9"]
 
 [ext_resource type="Script" path="res://scripts/Driving/DrivingScene.gd" id="1_driving"]
 [ext_resource type="Script" path="res://scripts/Driving/PlayerCar.gd" id="2_player"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://scripts/AI/TrafficManager.gd" id="7_traffic"]
 [ext_resource type="Script" path="res://scripts/Driving/NearMissDetector.gd" id="8_nearmiss"]
 [ext_resource type="Script" path="res://scripts/Driving/PassDetector.gd" id="9_pass"]
+[ext_resource type="Texture2D" path="res://assets/cars/player_car.svg" id="10_player_car"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
 size = Vector2(32, 16)
@@ -56,8 +57,7 @@ script = ExtResource("8_nearmiss")
 shape = SubResource("RectangleShape2D_1")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerCar"]
-modulate = Color(1, 0.2, 0.2, 1)
-scale = Vector2(2, 1)
+texture = ExtResource("10_player_car")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

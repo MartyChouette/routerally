@@ -1,17 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://g6h7i8j9k0l1m2n3"]
+[gd_scene load_steps=4 format=3 uid="uid://i8j9k0l1m2n3o4p5"]
 
 [ext_resource type="Script" path="res://scripts/Tiles/BaseTile.gd" id="1_base"]
-[ext_resource type="Texture2D" path="res://assets/tiles/nature.svg" id="2_nature"]
-[ext_resource type="Texture2D" path="res://assets/tiles/nature_normal.svg" id="3_normal"]
+[ext_resource type="Texture2D" path="res://assets/tiles/road_intersection.svg" id="2_road"]
+[ext_resource type="Texture2D" path="res://assets/tiles/road_intersection_normal.svg" id="3_normal"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
 size = Vector2(64, 64)
 
-[node name="Nature" type="Node2D"]
+[node name="RoadIntersection" type="Node2D"]
 script = ExtResource("1_base")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_nature")
+texture = ExtResource("2_road")
 
 [node name="NormalMap" type="Sprite2D" parent="."]
 texture = ExtResource("3_normal")
