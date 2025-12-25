@@ -1,13 +1,17 @@
 <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-  <!-- Base road -->
-  <rect width="64" height="64" fill="#404040"/>
-  <!-- Curved road surface -->
-  <path d="M 0 32 Q 32 0, 64 32" stroke="#505050" stroke-width="16" fill="none" stroke-linecap="round"/>
-  <path d="M 0 32 Q 32 0, 64 32" stroke="#505050" stroke-width="16" fill="none" stroke-linecap="round" transform="scale(1, -1) translate(0, -64)"/>
+  <!-- Base ground -->
+  <polygon points="32,8 56,32 32,56 8,32" fill="#404040"/>
+  
+  <!-- Curved road in isometric view -->
+  <path d="M 32 12 L 48 28 Q 56 36, 48 44 L 32 52" stroke="#505050" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M 16 28 L 32 12" stroke="#505050" stroke-width="12" fill="none" stroke-linecap="round"/>
+  
   <!-- Center line curve -->
-  <path d="M 0 32 Q 32 0, 64 32" stroke="#ffff00" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M 32 12 L 48 28 Q 56 36, 48 44 L 32 52" stroke="#ffff00" stroke-width="4" fill="none" stroke-linecap="round"/>
+  
   <!-- Road markings along curve -->
-  <circle cx="16" cy="24" r="2" fill="#ffffff"/>
-  <circle cx="32" cy="16" r="2" fill="#ffffff"/>
-  <circle cx="48" cy="24" r="2" fill="#ffffff"/>
+  <circle cx="40" cy="20" r="2" fill="#ffffff"/>
+  <circle cx="48" cy="28" r="2" fill="#ffffff"/>
+  <circle cx="48" cy="36" r="2" fill="#ffffff"/>
+  <circle cx="40" cy="44" r="2" fill="#ffffff"/>
 </svg>

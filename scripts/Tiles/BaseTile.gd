@@ -38,25 +38,7 @@ func update_connections(neighbor_array: Array[bool]):
 	_update_visuals()
 
 func _update_visuals():
-	# Update sprite rotation and appearance based on connections
-	# Count connections
-	var connection_count = 0
-	for conn in connections:
-		if conn:
-			connection_count += 1
-	
-	# Rotate based on connections
-	if connection_count == 2:
-		# Determine rotation based on which sides are connected
-		if connections[0] and connections[1]:  # Right and Left
-			rotation = 0.0
-		elif connections[2] and connections[3]:  # Down and Up
-			rotation = PI / 2.0
-		elif connections[0] and connections[2]:  # Right and Down
-			rotation = PI / 4.0
-		elif connections[0] and connections[3]:  # Right and Up
-			rotation = -PI / 4.0
-		elif connections[1] and connections[2]:  # Left and Down
-			rotation = 3 * PI / 4.0
-		elif connections[1] and connections[3]:  # Left and Up
-			rotation = -3 * PI / 4.0
+	# For isometric tiles, we don't rotate - tiles are already drawn in isometric perspective
+	# But we can flip/mirror based on connections if needed
+	# For now, keep tiles as-is since they're already isometric
+	pass

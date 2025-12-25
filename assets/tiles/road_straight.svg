@@ -1,13 +1,22 @@
 <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-  <!-- Base road -->
-  <rect width="64" height="64" fill="#404040"/>
-  <!-- Road surface -->
-  <rect x="0" y="24" width="64" height="16" fill="#505050"/>
-  <!-- Center line -->
-  <rect x="0" y="30" width="64" height="4" fill="#ffff00"/>
-  <!-- Road markings -->
-  <rect x="8" y="28" width="4" height="8" fill="#ffffff"/>
-  <rect x="20" y="28" width="4" height="8" fill="#ffffff"/>
-  <rect x="40" y="28" width="4" height="8" fill="#ffffff"/>
-  <rect x="52" y="28" width="4" height="8" fill="#ffffff"/>
+  <!-- Isometric tile base (diamond shape) -->
+  <defs>
+    <pattern id="roadPattern" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <rect width="32" height="2" fill="#ffff00"/>
+      <rect y="15" width="32" height="2" fill="#ffff00"/>
+    </pattern>
+  </defs>
+  
+  <!-- Base ground -->
+  <polygon points="32,8 56,32 32,56 8,32" fill="#404040"/>
+  
+  <!-- Isometric road surface -->
+  <polygon points="32,12 56,36 32,52 8,36" fill="#505050"/>
+  
+  <!-- Road markings (isometric perspective) -->
+  <rect x="8" y="30" width="48" height="4" fill="#ffff00" transform="rotate(45 32 32)"/>
+  <rect x="12" y="28" width="8" height="8" fill="#ffffff" transform="rotate(45 32 32)"/>
+  <rect x="24" y="28" width="8" height="8" fill="#ffffff" transform="rotate(45 32 32)"/>
+  <rect x="36" y="28" width="8" height="8" fill="#ffffff" transform="rotate(45 32 32)"/>
+  <rect x="48" y="28" width="8" height="8" fill="#ffffff" transform="rotate(45 32 32)"/>
 </svg>
