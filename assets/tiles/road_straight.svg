@@ -1,0 +1,13 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base road -->
+  <rect width="64" height="64" fill="#404040"/>
+  <!-- Road surface -->
+  <rect x="0" y="24" width="64" height="16" fill="#505050"/>
+  <!-- Center line -->
+  <rect x="0" y="30" width="64" height="4" fill="#ffff00"/>
+  <!-- Road markings -->
+  <rect x="8" y="28" width="4" height="8" fill="#ffffff"/>
+  <rect x="20" y="28" width="4" height="8" fill="#ffffff"/>
+  <rect x="40" y="28" width="4" height="8" fill="#ffffff"/>
+  <rect x="52" y="28" width="4" height="8" fill="#ffffff"/>
+</svg>

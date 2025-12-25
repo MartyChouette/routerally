@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://h7i8j9k0l1m2n3o4"]
+[gd_scene load_steps=4 format=3 uid="uid://h7i8j9k0l1m2n3o4"]
 
 [ext_resource type="Script" path="res://scripts/Tiles/BaseTile.gd" id="1_base"]
+[ext_resource type="Texture2D" path="res://assets/tiles/mountain.svg" id="2_mountain"]
+[ext_resource type="Texture2D" path="res://assets/tiles/mountain_normal.svg" id="3_normal"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
 size = Vector2(64, 64)
@@ -9,12 +11,10 @@ size = Vector2(64, 64)
 script = ExtResource("1_base")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.5, 0.4, 0.3, 1)
-scale = Vector2(64, 64)
+texture = ExtResource("2_mountain")
 
 [node name="NormalMap" type="Sprite2D" parent="."]
-modulate = Color(0.6, 0.5, 0.4, 1)
-scale = Vector2(64, 64)
+texture = ExtResource("3_normal")
 texture_filter = 2
 
 [node name="Area2D" type="Area2D" parent="."]

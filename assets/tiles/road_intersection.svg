@@ -1,0 +1,19 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base road -->
+  <rect width="64" height="64" fill="#404040"/>
+  <!-- Horizontal road -->
+  <rect x="0" y="24" width="64" height="16" fill="#505050"/>
+  <!-- Vertical road -->
+  <rect x="24" y="0" width="16" height="64" fill="#505050"/>
+  <!-- Center intersection -->
+  <rect x="24" y="24" width="16" height="16" fill="#606060"/>
+  <!-- Horizontal center line -->
+  <rect x="0" y="30" width="64" height="4" fill="#ffff00"/>
+  <!-- Vertical center line -->
+  <rect x="30" y="0" width="4" height="64" fill="#ffff00"/>
+  <!-- Road markings -->
+  <rect x="8" y="28" width="4" height="8" fill="#ffffff"/>
+  <rect x="52" y="28" width="4" height="8" fill="#ffffff"/>
+  <rect x="28" y="8" width="8" height="4" fill="#ffffff"/>
+  <rect x="28" y="52" width="8" height="4" fill="#ffffff"/>
+</svg>

@@ -1,0 +1,6 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Normal map for curved road -->
+  <rect width="64" height="64" fill="#8080ff"/>
+  <!-- Curved surface normal -->
+  <path d="M 0 32 Q 32 0, 64 32" stroke="#8080ff" stroke-width="16" fill="none"/>
+</svg>

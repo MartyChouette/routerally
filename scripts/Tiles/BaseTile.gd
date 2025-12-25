@@ -2,7 +2,7 @@ extends Node2D
 
 @export var tile_type: String = "road_straight"
 @onready var sprite = $Sprite2D
-@onready var normal_map_sprite = $NormalMap
+@onready var normal_map_sprite = get_node_or_null("NormalMap")
 
 var connections: Array[bool] = [false, false, false, false]  # Right, Left, Down, Up
 

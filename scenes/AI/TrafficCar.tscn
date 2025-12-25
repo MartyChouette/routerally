@@ -1,6 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://i8j9k0l1m2n3o4p5"]
 
 [ext_resource type="Script" path="res://scripts/AI/TrafficCar.gd" id="1_traffic"]
+[ext_resource type="Texture2D" path="res://assets/cars/traffic_car.svg" id="2_traffic_car"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
 size = Vector2(32, 16)
@@ -13,5 +14,4 @@ groups = ["traffic_car"]
 shape = SubResource("RectangleShape2D_1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.2, 0.2, 1, 1)
-scale = Vector2(2, 1)
+texture = ExtResource("2_traffic_car")

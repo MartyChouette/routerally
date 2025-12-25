@@ -1,0 +1,13 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base road -->
+  <rect width="64" height="64" fill="#404040"/>
+  <!-- Curved road surface -->
+  <path d="M 0 32 Q 32 0, 64 32" stroke="#505050" stroke-width="16" fill="none" stroke-linecap="round"/>
+  <path d="M 0 32 Q 32 0, 64 32" stroke="#505050" stroke-width="16" fill="none" stroke-linecap="round" transform="scale(1, -1) translate(0, -64)"/>
+  <!-- Center line curve -->
+  <path d="M 0 32 Q 32 0, 64 32" stroke="#ffff00" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <!-- Road markings along curve -->
+  <circle cx="16" cy="24" r="2" fill="#ffffff"/>
+  <circle cx="32" cy="16" r="2" fill="#ffffff"/>
+  <circle cx="48" cy="24" r="2" fill="#ffffff"/>
+</svg>

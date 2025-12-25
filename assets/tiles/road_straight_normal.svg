@@ -1,0 +1,7 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Normal map - flat surface (neutral normal) -->
+  <rect width="64" height="64" fill="#8080ff"/>
+  <!-- Slight elevation for road markings -->
+  <rect x="0" y="28" width="64" height="8" fill="#8080ff"/>
+  <rect x="0" y="30" width="64" height="4" fill="#8080ff"/>
+</svg>
