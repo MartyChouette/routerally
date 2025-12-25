@@ -1,19 +1,23 @@
 <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-  <!-- Base road -->
-  <rect width="64" height="64" fill="#404040"/>
-  <!-- Horizontal road -->
-  <rect x="0" y="24" width="64" height="16" fill="#505050"/>
-  <!-- Vertical road -->
-  <rect x="24" y="0" width="16" height="64" fill="#505050"/>
-  <!-- Center intersection -->
-  <rect x="24" y="24" width="16" height="16" fill="#606060"/>
-  <!-- Horizontal center line -->
-  <rect x="0" y="30" width="64" height="4" fill="#ffff00"/>
-  <!-- Vertical center line -->
-  <rect x="30" y="0" width="4" height="64" fill="#ffff00"/>
+  <!-- Base ground -->
+  <polygon points="32,8 56,32 32,56 8,32" fill="#404040"/>
+  
+  <!-- Isometric intersection - horizontal road -->
+  <polygon points="8,36 56,36 48,44 16,44" fill="#505050"/>
+  
+  <!-- Isometric intersection - vertical road -->
+  <polygon points="24,20 40,20 48,28 16,28" fill="#505050"/>
+  
+  <!-- Center intersection area -->
+  <polygon points="24,28 40,28 48,36 16,36" fill="#606060"/>
+  
+  <!-- Center lines -->
+  <line x1="8" y1="36" x2="56" y2="36" stroke="#ffff00" stroke-width="4"/>
+  <line x1="32" y1="20" x2="32" y2="44" stroke="#ffff00" stroke-width="4"/>
+  
   <!-- Road markings -->
-  <rect x="8" y="28" width="4" height="8" fill="#ffffff"/>
-  <rect x="52" y="28" width="4" height="8" fill="#ffffff"/>
-  <rect x="28" y="8" width="8" height="4" fill="#ffffff"/>
-  <rect x="28" y="52" width="8" height="4" fill="#ffffff"/>
+  <rect x="12" y="32" width="8" height="8" fill="#ffffff" transform="rotate(45 32 32)"/>
+  <rect x="44" y="32" width="8" height="8" fill="#ffffff" transform="rotate(45 32 32)"/>
+  <rect x="28" y="16" width="8" height="8" fill="#ffffff" transform="rotate(45 32 32)"/>
+  <rect x="28" y="48" width="8" height="8" fill="#ffffff" transform="rotate(45 32 32)"/>
 </svg>

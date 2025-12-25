@@ -1,6 +1,6 @@
 <svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
-  <!-- Normal map for intersection -->
-  <rect width="64" height="64" fill="#8080ff"/>
+  <!-- Isometric normal map for intersection -->
+  <polygon points="32,8 56,32 32,56 8,32" fill="#8080ff"/>
   <!-- Flat intersection surface -->
-  <rect x="24" y="24" width="16" height="16" fill="#8080ff"/>
+  <polygon points="24,28 40,28 48,36 16,36" fill="#8080ff"/>
 </svg>
